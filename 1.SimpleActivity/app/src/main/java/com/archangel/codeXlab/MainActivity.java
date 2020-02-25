@@ -1,13 +1,14 @@
 package com.archangel.codeXlab;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
     private int mCount = 0;
@@ -43,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mCount = 0;
-                mShowCount.setText(String.format("%d", mCount));
+                mShowCount.setText(mCount);
                 v.setBackgroundColor(Color.GRAY);
             }
         });
@@ -56,13 +57,13 @@ public class MainActivity extends AppCompatActivity {
     public void countUp(View view) {
         mCount++;
         if (mShowCount != null)
-            mShowCount.setText(String.format("%d", mCount));
+            mShowCount.setText(mCount);
         if (mCount > 0)
             mResetCounter.setBackgroundColor(Color.GREEN);
     }
 
     @Override
-    protected void onSaveInstanceState(Bundle outState) {
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
         String count = mShowCount.getText().toString();
         outState.putString("count_value", count);
