@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mCount = 0;
-                mShowCount.setText(mCount);
+                mShowCount.setText(String.valueOf(mCount));
                 v.setBackgroundColor(Color.GRAY);
             }
         });
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
     public void countUp(View view) {
         mCount++;
         if (mShowCount != null)
-            mShowCount.setText(mCount);
+            mShowCount.setText(String.valueOf(mCount));
         if (mCount > 0)
             mResetCounter.setBackgroundColor(Color.GREEN);
     }

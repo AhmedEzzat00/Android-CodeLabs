@@ -13,10 +13,11 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8cd06d5-3c24-4a62-9898-c91cceadf11c" name="Default Changelist" comment="add screenshots">
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+    <list default="true" id="c8cd06d5-3c24-4a62-9898-c91cceadf11c" name="Default Changelist" comment="Remove String warring">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/archangel/codeXlab/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/archangel/codeXlab/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2.MessageAndRecieve/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../2.MessageAndRecieve/.gitignore" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,7 +25,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Nexus_5X_API_25" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="FFY5T18111011095" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -285,7 +286,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583167009837</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Remove String warring">
+      <created>1583317624840</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1583317624840</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -331,7 +339,8 @@
     <MESSAGE value="Change Count button to material design" />
     <MESSAGE value="Preserve the layout from the user configuration changes" />
     <MESSAGE value="add screenshots" />
-    <option name="LAST_COMMIT_MESSAGE" value="add screenshots" />
+    <MESSAGE value="Remove String warring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove String warring" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="masterDetails">
