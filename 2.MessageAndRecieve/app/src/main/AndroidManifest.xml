@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.archangel.lab_2_towactivites">
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ImplicitIntentsActivity"
+            android:label="Implicit Intent"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.archangel.lab_2_towactivites.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".SecondActivity"
+            android:label="Second Activity"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.archangel.lab_2_towactivites.MainActivity" />
+        </activity>
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <!-- This activity is the main entry point for this app -->
+                <action android:name="android.intent.action.MAIN" />
+                <!-- This activity should be the top-level item in the launcher -->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

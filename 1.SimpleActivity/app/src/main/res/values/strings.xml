@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CodeLab</string>
+    <string name="button_label_toast">Toast</string>
+    <string name="button_label_count">Count</string>
+    <string name="text_initial_count">0</string>
+    <string name="button_zero">ZERO</string>
+</resources>
