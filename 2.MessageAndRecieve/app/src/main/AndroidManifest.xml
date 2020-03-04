@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.archangel.lab_2_towactivites">
+    package="com.archangel.messageandrecieve">
 
     <uses-permission android:name="android.permission.CAMERA"/>
 
@@ -12,24 +12,24 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ImplicitIntentsActivity"
+            android:name="com.archangel.messageandrecieve.ImplicitIntentsActivity"
             android:label="Implicit Intent"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName="com.archangel.messageandrecieve.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.archangel.lab_2_towactivites.MainActivity" />
+                android:value="com.archangel.messageandrecieve.MainActivity" />
         </activity>
 
         <activity
-            android:name=".SecondActivity"
+            android:name="com.archangel.messageandrecieve.SecondActivity"
             android:label="Second Activity"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName="com.archangel.messageandrecieve.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.archangel.lab_2_towactivites.MainActivity" />
+                android:value="com.archangel.messageandrecieve.MainActivity" />
         </activity>
 
-        <activity android:name=".MainActivity">
+        <activity android:name="com.archangel.messageandrecieve.MainActivity">
             <intent-filter>
                 <!-- This activity is the main entry point for this app -->
                 <action android:name="android.intent.action.MAIN" />

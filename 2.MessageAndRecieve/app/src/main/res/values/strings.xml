@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Lab_2_TowActivites</string>
+    <string name="app_name">Lab 2:Message and Receive</string>
     <string name="button_send">Send</string>
     <string name="message_received">Message Received</string>
     <string name="message_hint">Type Your Message Here</string>

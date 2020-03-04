@@ -1,4 +1,4 @@
-package com.archangel.lab_2_towactivites;
+package com.archangel.messageandrecieve;
 
 import androidx.appcompat.app.AppCompatActivity;
 
