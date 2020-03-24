@@ -1,16 +1,16 @@
 package com.archangel.droidcafe;
 
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,6 +29,32 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        //Add clickable behavior to the images set of android versions
+        findViewById(R.id.dounts).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                displayToast(getString(R.string.donut_order_message));
+            }
+        });
+
+        findViewById(R.id.ice_cream).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                displayToast(getString(R.string.ice_cream_order_message));
+            }
+        });
+
+        findViewById(R.id.froyo).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                displayToast(getString(R.string.froyo_order_message));
+            }
+        });
+    }
+
+    public void displayToast(String message) {
+        Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
     }
 
     @Override
