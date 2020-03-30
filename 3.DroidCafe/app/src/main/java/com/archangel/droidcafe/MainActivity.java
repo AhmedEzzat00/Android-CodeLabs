@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     private String mOrderMessage;
     public static final String EXTRA_MESSAGE = "com.archangel.droidcafe.extra.MESSAGE";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,21 +37,24 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.dounts).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                displayToast(getString(R.string.donut_order_message));
+                mOrderMessage = getString(R.string.donut_order_message);
+                displayToast(mOrderMessage);
             }
         });
 
         findViewById(R.id.ice_cream).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                displayToast(getString(R.string.ice_cream_order_message));
+                mOrderMessage = getString(R.string.ice_cream_order_message);
+                displayToast(mOrderMessage);
             }
         });
 
         findViewById(R.id.froyo).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                displayToast(getString(R.string.froyo_order_message));
+                mOrderMessage = getString(R.string.froyo_order_message);
+                displayToast(mOrderMessage);
             }
         });
     }
