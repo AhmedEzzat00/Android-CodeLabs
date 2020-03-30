@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
+
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -14,8 +14,6 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    private String mOrderMessage;
-    public static final String EXTRA_MESSAGE = "com.archangel.droidcafe.extra.MESSAGE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,39 +27,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent orderIntent = new Intent(MainActivity.this, OrderActivity.class);
+                orderIntent.putExtra(FirstFragment.EXTRA_MESSAGE, FirstFragment.getOrderMessage());
                 startActivity(orderIntent);
             }
         });
 
-        //Add clickable behavior to the images set of android versions
-        findViewById(R.id.dounts).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mOrderMessage = getString(R.string.donut_order_message);
-                displayToast(mOrderMessage);
-            }
-        });
-
-        findViewById(R.id.ice_cream).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mOrderMessage = getString(R.string.ice_cream_order_message);
-                displayToast(mOrderMessage);
-            }
-        });
-
-        findViewById(R.id.froyo).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mOrderMessage = getString(R.string.froyo_order_message);
-                displayToast(mOrderMessage);
-            }
-        });
     }
 
-    public void displayToast(String message) {
-        Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
