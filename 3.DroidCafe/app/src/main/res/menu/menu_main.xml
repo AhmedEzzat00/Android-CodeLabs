@@ -2,11 +2,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.archangel.droidcafe.MainActivity">
+
     <item
-        android:id="@+id/action_contact"
-        android:orderInCategory="100"
-        android:title="@string/action_contact"
-        app:showAsAction="never" />
+        android:id="@+id/action_date_picker"
+        android:orderInCategory="1"
+        android:title="@string/date"
+        android:icon="@drawable/ic_date"
+        app:showAsAction="always" />
 
     <item
         android:id="@+id/action_order"
@@ -20,7 +22,7 @@
         android:orderInCategory="20"
         android:title="@string/action_status"
         android:icon="@drawable/ic_status"
-        app:showAsAction="always" />
+        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/action_favorites"
@@ -28,5 +30,11 @@
         android:title="@string/action_favorites"
         android:icon="@drawable/ic_favorites"
         app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_contact"
+        android:orderInCategory="100"
+        android:title="@string/action_contact"
+        app:showAsAction="never" />
 
 </menu>

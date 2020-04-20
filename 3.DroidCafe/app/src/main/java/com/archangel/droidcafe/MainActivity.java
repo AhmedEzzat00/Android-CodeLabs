@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.DialogFragment;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -55,6 +56,10 @@ public class MainActivity extends AppCompatActivity {
                 orderIntent.putExtra(FirstFragment.EXTRA_MESSAGE, FirstFragment.getOrderMessage());
                 startActivity(orderIntent);
                 return true;
+            case R.id.action_date_picker:
+                DialogFragment dialogFragment = new DatePickerFragment();
+                dialogFragment.show(getSupportFragmentManager(), getString(R.string.datePicker));
+                return true;
             case R.id.action_status:
                 displayToast(getString(R.string.action_status_message));
                 return true;
@@ -75,4 +80,6 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(), message,
                 Toast.LENGTH_SHORT).show();
     }
+
+
 }
