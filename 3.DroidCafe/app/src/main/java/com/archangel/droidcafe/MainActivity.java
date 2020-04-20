@@ -7,7 +7,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.DialogFragment;
@@ -81,5 +80,12 @@ public class MainActivity extends AppCompatActivity {
                 Toast.LENGTH_SHORT).show();
     }
 
+    public void processDatePickerResult(int year, int month, int day) {
+        String month_string = Integer.toString(month + 1);//Month start from 0 for Jan
+        String day_string = Integer.toString(day);
+        String year_string = Integer.toString(year);
+        String dateMessage = (day_string + "/" + month_string + "/" + year_string);
+        Toast.makeText(this, "Date: " + dateMessage, Toast.LENGTH_SHORT).show();
+    }
 
 }
