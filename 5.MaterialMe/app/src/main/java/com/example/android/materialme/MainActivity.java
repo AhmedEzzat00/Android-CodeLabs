@@ -24,6 +24,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /***
  * Main Activity for the Material Me app, a mock sports news application
@@ -61,11 +62,20 @@ public class MainActivity extends AppCompatActivity {
 
         //swipeDirs to attach the swipe behavior to right and left
         //(ItemTouchHelper.LEFT and ItemTouchHelper.RIGHT) --> swipe effect detection
-        ItemTouchHelper helper= new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0,
+        //dragDirs the first argument determine the directions of the supported moves
+        ItemTouchHelper helper = new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(
+                ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT |
+                        ItemTouchHelper.DOWN | ItemTouchHelper.UP,
                 ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
             @Override
             public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
-                return false;
+                int from = viewHolder.getAdapterPosition();
+                int to = target.getAdapterPosition();
+
+                //swap the item in the dataset
+                Collections.swap(mSportsData, from, to);
+                mAdapter.notifyItemMoved(from, to);
+                return true;
             }
 
             @Override
@@ -96,9 +106,9 @@ public class MainActivity extends AppCompatActivity {
 
         // Create the ArrayList of Sports objects with titles and
         // information about each sport.
-        for(int i=0;i<sportsList.length;i++){
-            mSportsData.add(new Sport(sportsList[i],sportsInfo[i],
-                    sportsImageResources.getResourceId(i,0)));
+        for (int i = 0; i < sportsList.length; i++) {
+            mSportsData.add(new Sport(sportsList[i], sportsInfo[i],
+                    sportsImageResources.getResourceId(i, 0)));
         }
         sportsImageResources.recycle();
         // Notify the adapter of the change.

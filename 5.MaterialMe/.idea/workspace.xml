@@ -9,7 +9,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0458ddc-b58b-4dd2-b53e-34928f6be2ec" name="Default Changelist" comment="Adding image assets ,recreate the list_item.xml and load images">
+    <list default="true" id="c0458ddc-b58b-4dd2-b53e-34928f6be2ec" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/android/materialme/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/android/materialme/MainActivity.java" afterDir="false" />
     </list>
@@ -142,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597059801422</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Implement Swipe to DELETE behavior">
+      <created>1597061962790</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1597061962790</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -189,7 +196,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit for MaterialMe" />
     <MESSAGE value="Adding image assets ,recreate the list_item.xml and load images" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding image assets ,recreate the list_item.xml and load images" />
+    <MESSAGE value="Implement Swipe to DELETE behavior" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement Swipe to DELETE behavior" />
   </component>
   <component name="WindowStateProjectService">
     <state x="200" y="96" key="#PSD" timestamp="1597054699050">
@@ -208,10 +216,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="263" y="119" key="AndroidCreateResourceFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1597056139764" />
-    <state x="285" y="0" key="CommitChangelistDialog2" timestamp="1597059872238">
+    <state x="285" y="0" key="CommitChangelistDialog2" timestamp="1597061961144">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="285" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1597059872238" />
+    <state x="285" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1597061961144" />
     <state x="463" y="104" key="FileChooserDialogImpl" timestamp="1597059477893">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
