@@ -10,14 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0458ddc-b58b-4dd2-b53e-34928f6be2ec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_1_3_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_solver_1_1_3_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/android/materialme/DetailActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_detail.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/android/materialme/SportsAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/android/materialme/SportsAdapter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597062659202</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add a DetailActivity to display the card Info">
+      <created>1597063488034</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1597063488035</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -215,17 +216,18 @@
     <MESSAGE value="Adding image assets ,recreate the list_item.xml and load images" />
     <MESSAGE value="Implement Swipe to DELETE behavior" />
     <MESSAGE value="Implement Drag and Drop" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement Drag and Drop" />
+    <MESSAGE value="Add a DetailActivity to display the card Info" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add a DetailActivity to display the card Info" />
   </component>
   <component name="WindowStateProjectService">
     <state x="200" y="96" key="#PSD" timestamp="1597054699050">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="200" y="96" key="#PSD/0.0.1366.728@0.0.1366.728" timestamp="1597054699050" />
-    <state x="488" y="80" key="#com.intellij.ide.util.MemberChooser" timestamp="1597056641929">
+    <state x="488" y="80" key="#com.intellij.ide.util.MemberChooser" timestamp="1597063522848">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="80" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1597056641929" />
+    <state x="488" y="80" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1597063522848" />
     <state x="263" y="119" key="AndroidCreateResourceDirectoryDialog" timestamp="1597056153771">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -234,10 +236,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="263" y="119" key="AndroidCreateResourceFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1597056139764" />
-    <state x="285" y="0" key="CommitChangelistDialog2" timestamp="1597062657197">
+    <state x="285" y="0" key="CommitChangelistDialog2" timestamp="1597063485312">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="285" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1597062657197" />
+    <state x="285" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1597063485312" />
     <state x="463" y="104" key="FileChooserDialogImpl" timestamp="1597059477893">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
