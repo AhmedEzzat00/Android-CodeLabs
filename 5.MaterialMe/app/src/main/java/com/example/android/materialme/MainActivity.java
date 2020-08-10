@@ -21,6 +21,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.helper.ItemTouchHelper;
 
 import java.util.ArrayList;
 
@@ -55,6 +56,30 @@ public class MainActivity extends AppCompatActivity {
 
         // Get the data.
         initializeData();
+
+        //creating swipe to dismiss and drag and drop functionality.
+
+        //swipeDirs to attach the swipe behavior to right and left
+        //(ItemTouchHelper.LEFT and ItemTouchHelper.RIGHT) --> swipe effect detection
+        ItemTouchHelper helper= new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0,
+                ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
+            @Override
+            public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
+                return false;
+            }
+
+            @Override
+            public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
+                //remove the card when swipe Right or Left
+                mSportsData.remove(viewHolder.getAdapterPosition());
+
+                //notify the adapter that there is an item removed
+                mAdapter.notifyItemRemoved(viewHolder.getAdapterPosition());
+            }
+        });
+
+        //Attach the helper to the recyclerview
+        helper.attachToRecyclerView(mRecyclerView);
     }
 
     /**
@@ -65,8 +90,6 @@ public class MainActivity extends AppCompatActivity {
         String[] sportsList = getResources().getStringArray(R.array.sports_titles);
         String[] sportsInfo = getResources().getStringArray(R.array.sports_info);
         TypedArray sportsImageResources = getResources().obtainTypedArray(R.array.sports_images);
-
-
 
         // Clear the existing data (to avoid duplication).
         mSportsData.clear();
@@ -81,5 +104,4 @@ public class MainActivity extends AppCompatActivity {
         // Notify the adapter of the change.
         mAdapter.notifyDataSetChanged();
     }
-
 }
