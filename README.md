@@ -31,3 +31,21 @@ Another thing is the main navigation of the user throw the app using the up key 
 
 <img src="https://github.com/AhmedEzzat00/Android-CodeLabs/blob/master/screenshots/lab4_mainScreen.png" width="200">                                                          <img src="https://github.com/AhmedEzzat00/Android-CodeLabs/blob/master/screenshots/lab4_datePicker.png" width="200">
 
+*5.Delightful user experience:* In this chapter, we use drawables, which are compiled images that we can be used in our app. Android provides classes and resources to help include rich images in your application with a minimal impact on your app's performance. Apply common styles to views, use drawable resources, and apply themes to the app. These practices reduce code and make the code easier to read and maintain. As an example of applying theme is the use of `Dark_Mode` to provide a low light theme for saving battery and reduce eye tension in the night.
+
+<img src="https://github.com/AhmedEzzat00/Android-CodeLabs/blob/master/screenshots/lab5_scorekeeper.png" width="200"> 
+
+Google's Material Design guidelines are a series of best practices for creating visually appealing and intuitive applications.`CardView` and `FloatingActionButton` widgets are parts of the Material Design they provide a solid pattern to rely on it's behavior, how to use images efficiently.
+***Material Design offers the following guidelines for CARDS:***
+
+* A card can be dismissed, usually by swiping it away.
+* A list of cards can be reordered by holding down and dragging the cards.
+* Tapping on the card provides further details.
+
+<img src="https://github.com/AhmedEzzat00/Android-CodeLabs/blob/master/screenshots/lab5_materialme.png" width="200"> 
+
+Another crucial skill is to know how to make an app that has screen compatibility to the different screen of different devices and different orientation so that the User Experience does not being a disturbance for the growth or shrinking of the screen, finally it to localize app to use different languages for different regions 
+
+<img src="https://github.com/AhmedEzzat00/Android-CodeLabs/blob/master/screenshots/lab5_land.png" width="650">                                                                  <img src="https://github.com/AhmedEzzat00/Android-CodeLabs/blob/master/screenshots/lab5_spian.png" width="200"> 
+
+
