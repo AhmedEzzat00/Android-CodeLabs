@@ -10,8 +10,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0458ddc-b58b-4dd2-b53e-34928f6be2ec" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_design_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_media_compat_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_v4_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_transition_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_reset.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/android/materialme/SportsAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/android/materialme/SportsAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/android/materialme/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/android/materialme/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597063488035</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add Click behavior to the card to open it's details">
+      <created>1597063874406</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1597063874406</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -217,7 +234,8 @@
     <MESSAGE value="Implement Swipe to DELETE behavior" />
     <MESSAGE value="Implement Drag and Drop" />
     <MESSAGE value="Add a DetailActivity to display the card Info" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add a DetailActivity to display the card Info" />
+    <MESSAGE value="Add Click behavior to the card to open it's details" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Click behavior to the card to open it's details" />
   </component>
   <component name="WindowStateProjectService">
     <state x="200" y="96" key="#PSD" timestamp="1597054699050">
@@ -236,34 +254,34 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="263" y="119" key="AndroidCreateResourceFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1597056139764" />
-    <state x="285" y="0" key="CommitChangelistDialog2" timestamp="1597063485312">
+    <state x="285" y="0" key="CommitChangelistDialog2" timestamp="1597063871956">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="285" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1597063485312" />
+    <state x="285" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1597063871956" />
     <state x="463" y="104" key="FileChooserDialogImpl" timestamp="1597059477893">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="104" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1597059477893" />
-    <state width="1323" height="178" key="GridCell.Tab.0.bottom" timestamp="1597061891064">
+    <state width="1323" height="178" key="GridCell.Tab.0.bottom" timestamp="1597064998341">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1597061891064" />
-    <state width="1323" height="178" key="GridCell.Tab.0.center" timestamp="1597061891064">
+    <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1597064998341" />
+    <state width="1323" height="178" key="GridCell.Tab.0.center" timestamp="1597064998340">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1597061891064" />
-    <state width="1323" height="178" key="GridCell.Tab.0.left" timestamp="1597061891063">
+    <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1597064998340" />
+    <state width="1323" height="178" key="GridCell.Tab.0.left" timestamp="1597064998340">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1597061891063" />
-    <state width="1323" height="178" key="GridCell.Tab.0.right" timestamp="1597061891064">
+    <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1597064998340" />
+    <state width="1323" height="178" key="GridCell.Tab.0.right" timestamp="1597064998340">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1597061891064" />
-    <state x="120" y="0" key="ScreenshotViewer.Dimensions" timestamp="1597059479050">
+    <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1597064998340" />
+    <state x="120" y="0" key="ScreenshotViewer.Dimensions" timestamp="1597065014088">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="120" y="0" key="ScreenshotViewer.Dimensions/0.0.1366.728@0.0.1366.728" timestamp="1597059479050" />
+    <state x="120" y="0" key="ScreenshotViewer.Dimensions/0.0.1366.728@0.0.1366.728" timestamp="1597065014088" />
     <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1597054862580">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

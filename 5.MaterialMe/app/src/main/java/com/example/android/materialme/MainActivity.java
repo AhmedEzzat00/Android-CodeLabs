@@ -18,10 +18,12 @@ package com.example.android.materialme;
 
 import android.content.res.TypedArray;
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
+import android.view.View;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -113,5 +115,14 @@ public class MainActivity extends AppCompatActivity {
         sportsImageResources.recycle();
         // Notify the adapter of the change.
         mAdapter.notifyDataSetChanged();
+    }
+
+    public void resetSports(View view) {
+        initializeData();
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
+        super.onSaveInstanceState(outState, outPersistentState);
     }
 }
