@@ -10,13 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0458ddc-b58b-4dd2-b53e-34928f6be2ec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/values-sw600dp/integers.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/values-sw600dp/styles.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/values-w600dp-land/integers.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/values-es-rES/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_detail.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/list_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/list_item.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597083970767</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add Tablet configuration">
+      <created>1597085693250</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1597085693250</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -253,7 +255,8 @@
     <MESSAGE value="Add Click behavior to the card to open it's details" />
     <MESSAGE value="Add the FAB and change style colors.xml" />
     <MESSAGE value="Change the LayoutManger from Linear to Grid for the landscape orientation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change the LayoutManger from Linear to Grid for the landscape orientation" />
+    <MESSAGE value="Add Tablet configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Tablet configuration" />
   </component>
   <component name="WindowStateProjectService">
     <state x="200" y="96" key="#PSD" timestamp="1597054699050">
@@ -268,14 +271,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="263" y="119" key="AndroidCreateResourceDirectoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1597056153771" />
-    <state x="263" y="119" key="AndroidCreateResourceFileDialog" timestamp="1597084841047">
+    <state x="263" y="119" key="AndroidCreateResourceFileDialog" timestamp="1597086600337">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="263" y="119" key="AndroidCreateResourceFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1597084841047" />
-    <state x="285" y="0" key="CommitChangelistDialog2" timestamp="1597083968049">
+    <state x="263" y="119" key="AndroidCreateResourceFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1597086600337" />
+    <state x="285" y="0" key="CommitChangelistDialog2" timestamp="1597085691443">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="285" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1597083968049" />
+    <state x="285" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1597085691443" />
     <state x="463" y="104" key="FileChooserDialogImpl" timestamp="1597059477893">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -308,5 +311,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="92" y="92" width="1182" height="544" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1366.728@0.0.1366.728" timestamp="1597084765537" />
+    <state x="463" y="145" key="strings.multiline.dialog" timestamp="1597086747355">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="145" key="strings.multiline.dialog/0.0.1366.728@0.0.1366.728" timestamp="1597086747355" />
   </component>
 </project>
