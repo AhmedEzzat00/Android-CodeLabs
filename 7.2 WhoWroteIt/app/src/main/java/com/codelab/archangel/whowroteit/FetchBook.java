@@ -10,14 +10,14 @@ public class FetchBook extends AsyncTask<String, Void, String> {
     private WeakReference<TextView> mTitleText;
     private WeakReference<TextView> mAuthorText;
 
-    public FetchBook(WeakReference<TextView> mTitleText, WeakReference<TextView> mAuthorText) {
-        this.mTitleText = mTitleText;
-        this.mAuthorText = mAuthorText;
+    public FetchBook(TextView mTitleText, TextView mAuthorText) {
+        this.mTitleText = new WeakReference<>(mTitleText);
+        this.mAuthorText = new WeakReference<>(mAuthorText);
     }
 
     @Override
     protected String doInBackground(String... strings) {
-        return null;
+        return NetworkUtils.getBookInfo(strings[0]);
     }
 
     @Override
