@@ -17,7 +17,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button notifyButton;
+    private Button button_notify;
     private Button button_cancel;
     private Button button_update;
     private static final String PRIMARY_CHANNEL_ID = "primary_notification_channel";
@@ -29,8 +29,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        notifyButton = findViewById(R.id.notify_button);
-        notifyButton.setOnClickListener(new View.OnClickListener() {
+        button_notify = findViewById(R.id.notify_button);
+        button_notify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 sendNotification();
@@ -53,11 +53,13 @@ public class MainActivity extends AppCompatActivity {
                 cancelNotification();
             }
         });
+        setNotificationButtonState(true, false, false);
     }
 
     private void sendNotification() {
         NotificationCompat.Builder notifyBuilder = getNotificationBuilder();
         mNotifyManger.notify(NOTIFICATION_ID, notifyBuilder.build());
+        setNotificationButtonState(false, true, true);
     }
 
     public void createNotificationChannel() {
@@ -100,10 +102,17 @@ public class MainActivity extends AppCompatActivity {
                 .setBigContentTitle("Notification Updated Successfully"));
         //Fire it !
         mNotifyManger.notify(NOTIFICATION_ID, notifyBuilder.build());
+        setNotificationButtonState(false, false, true);
     }
 
     public void cancelNotification() {
         mNotifyManger.cancel(NOTIFICATION_ID);
+        setNotificationButtonState(true, false, false);
     }
 
+    void setNotificationButtonState(Boolean isNotifyEnabled, Boolean isUpdateEnabled, Boolean isCancelEnabled) {
+        button_notify.setEnabled(isNotifyEnabled);
+        button_update.setEnabled(isUpdateEnabled);
+        button_cancel.setEnabled(isCancelEnabled);
+    }
 }
