@@ -22,6 +22,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<String> {
 
     private static final int LOADER_ID = 0;
@@ -107,6 +109,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
         //register a custom broadcast in the button
         Intent customBroadcastIntent = new Intent(ACTION_CUSTOM_BROADCAST);
+        customBroadcastIntent.putExtra("key", new Random().nextInt(20));
         LocalBroadcastManager.getInstance(this).sendBroadcast(customBroadcastIntent);
     }
 
