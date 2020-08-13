@@ -30,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
     private static final String ACTION_UPDATE_NOTIFICATION =
             BuildConfig.APPLICATION_ID + ".ACTION_UPDATE_NOTIFICATION";
 
+    private static final String ACTION_DELETE_NOTIFICATION =
+            BuildConfig.APPLICATION_ID + ".ACTION_DELETE_NOTIFICATION";
+
     private NotificationReceiver mReceiver = new NotificationReceiver();
 
     @Override
@@ -60,7 +63,10 @@ public class MainActivity extends AppCompatActivity {
                 cancelNotification();
             }
         });
-        registerReceiver(mReceiver, new IntentFilter(ACTION_UPDATE_NOTIFICATION));
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction(ACTION_UPDATE_NOTIFICATION);
+        intentFilter.addAction(ACTION_DELETE_NOTIFICATION);
+        registerReceiver(mReceiver, intentFilter);
         setNotificationButtonState(true, false, false);
     }
 
@@ -75,10 +81,15 @@ public class MainActivity extends AppCompatActivity {
         Intent updateIntent = new Intent(ACTION_UPDATE_NOTIFICATION);
         PendingIntent updatePendingIntent = PendingIntent.getBroadcast(
                 this, NOTIFICATION_ID, updateIntent, PendingIntent.FLAG_ONE_SHOT);
+
+        //intent for the user deletion of intent
+        Intent deleteIntent = new Intent(ACTION_DELETE_NOTIFICATION);
+        PendingIntent deleltePendingIntent = PendingIntent.getBroadcast(
+                this, NOTIFICATION_ID, deleteIntent, PendingIntent.FLAG_ONE_SHOT);
         NotificationCompat.Builder notifyBuilder = getNotificationBuilder();
         //Add the action to the notification
         notifyBuilder.addAction(R.drawable.ic_update, "Replay Notification", updatePendingIntent);
-
+        notifyBuilder.setDeleteIntent(deleltePendingIntent);
         mNotifyManger.notify(NOTIFICATION_ID, notifyBuilder.build());
         setNotificationButtonState(false, true, true);
     }
@@ -143,7 +154,18 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onReceive(Context context, Intent intent) {
-            updateNotification();
+            String intentAction = intent.getAction();
+            if (intentAction != null) {
+                switch (intentAction) {
+                    case ACTION_UPDATE_NOTIFICATION:
+                        updateNotification();
+                        break;
+                    case ACTION_DELETE_NOTIFICATION:
+                        setNotificationButtonState(true, false, false);
+                        break;
+                }
+            }
+
         }
     }
 }
