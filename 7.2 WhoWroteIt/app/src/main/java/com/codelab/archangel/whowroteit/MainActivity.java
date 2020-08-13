@@ -7,6 +7,8 @@ import androidx.loader.app.LoaderManager;
 import androidx.loader.content.Loader;
 
 import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
@@ -26,6 +28,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     private TextView mTitleText;
     private TextView mAuthorText;
 
+    private CustomReceiver mReceiver = new CustomReceiver();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,10 +39,23 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         mTitleText = findViewById(R.id.titleText);
         mAuthorText = findViewById(R.id.authorText);
 
+        IntentFilter filter = new IntentFilter();
+        filter.addAction(Intent.ACTION_POWER_CONNECTED);
+        filter.addAction(Intent.ACTION_POWER_DISCONNECTED);
+
         //Connect the activity to the loader
         if (LoaderManager.getInstance(this).getLoader(LOADER_ID) != null) {
             LoaderManager.getInstance(this).initLoader(LOADER_ID, null, this);
         }
+
+        //register the Power receiver
+        this.registerReceiver(mReceiver, filter);
+    }
+
+    @Override
+    protected void onDestroy() {
+        this.unregisterReceiver(mReceiver);
+        super.onDestroy();
     }
 
     public void searchBooks(View view) {
