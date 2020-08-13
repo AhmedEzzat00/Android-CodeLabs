@@ -5,6 +5,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.loader.app.LoaderManager;
 import androidx.loader.content.Loader;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import android.content.Context;
 import android.content.Intent;
@@ -30,6 +31,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     private CustomReceiver mReceiver = new CustomReceiver();
 
+    private static final String ACTION_CUSTOM_BROADCAST =
+            BuildConfig.APPLICATION_ID + "ACTION_CUSTOM_BROADCAST";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         IntentFilter filter = new IntentFilter();
         filter.addAction(Intent.ACTION_POWER_CONNECTED);
         filter.addAction(Intent.ACTION_POWER_DISCONNECTED);
+        filter.addAction(Intent.ACTION_HEADSET_PLUG);
 
         //Connect the activity to the loader
         if (LoaderManager.getInstance(this).getLoader(LOADER_ID) != null) {
@@ -50,11 +55,14 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
         //register the Power receiver
         this.registerReceiver(mReceiver, filter);
+        LocalBroadcastManager.getInstance(this).
+                registerReceiver(mReceiver, new IntentFilter(ACTION_CUSTOM_BROADCAST));
     }
 
     @Override
     protected void onDestroy() {
         this.unregisterReceiver(mReceiver);
+        LocalBroadcastManager.getInstance(this).unregisterReceiver(mReceiver);
         super.onDestroy();
     }
 
@@ -96,6 +104,10 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                 mTitleText.setText(R.string.no_network);
             }
         }
+
+        //register a custom broadcast in the button
+        Intent customBroadcastIntent = new Intent(ACTION_CUSTOM_BROADCAST);
+        LocalBroadcastManager.getInstance(this).sendBroadcast(customBroadcastIntent);
     }
 
     @NonNull
