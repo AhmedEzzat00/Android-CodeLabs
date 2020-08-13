@@ -16,6 +16,8 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     private Button notifyButton;
+    private Button button_cancel;
+    private Button button_update;
     private static final String PRIMARY_CHANNEL_ID = "primary_notification_channel";
     private NotificationManager mNotifyManger;
 
@@ -33,6 +35,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         createNotificationChannel();
+
+        button_update = findViewById(R.id.update);
+        button_update.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Update the notification
+            }
+        });
+
+        button_cancel = findViewById(R.id.cancel);
+        button_cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                cancelNotification();
+            }
+        });
     }
 
     private void sendNotification() {
@@ -68,5 +86,12 @@ public class MainActivity extends AppCompatActivity {
                 .setContentIntent(notificationPendingIntent)
                 .setAutoCancel(true);
         return notifyBuilder;
+    }
+
+    public void updateNotification() {
+    }
+
+    public void cancelNotification() {
+        mNotifyManger.cancel(NOTIFICATION_ID);
     }
 }
