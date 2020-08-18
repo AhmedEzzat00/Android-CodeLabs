@@ -1,9 +1,13 @@
 package com.codelab.archangel.standup;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -27,9 +31,15 @@ public class MainActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
                 String message;
                 if (isChecked)
+                {
                     message = " Stand Up Alarm is ON!";
+                    deliverNotification(MainActivity.this);
+                }
                 else
+                {
                     message = "Stand Up Alarm is OFF";
+                    mNotificationManger.cancelAll();
+                }
 
                 Toast.makeText(MainActivity.this, message, Toast.LENGTH_SHORT).show();
             }
@@ -50,5 +60,20 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private void deliverNotification(Context context){
+        Intent intent=new Intent(context,MainActivity.class);
+        PendingIntent contentPendingIntent= PendingIntent.getActivity(context,NOTIFICATION_ID,intent
+        ,PendingIntent.FLAG_UPDATE_CURRENT);
 
+        NotificationCompat.Builder builder=new NotificationCompat.Builder(context,PRIMARY_ID)
+                .setSmallIcon(R.drawable.ic_face)
+                .setContentTitle(getString(R.string.notification_title))
+                .setContentText(getString(R.string.notification_text))
+                .setContentIntent(contentPendingIntent)
+                .setAutoCancel(true)
+                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                .setDefaults(NotificationCompat.DEFAULT_ALL);
+
+        mNotificationManger.notify(NOTIFICATION_ID,builder.build());
+    }
 }
