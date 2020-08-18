@@ -30,10 +30,17 @@ public class MainActivity extends AppCompatActivity {
 
         final AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
         final Intent notifyIntent = new Intent(this, AlarmReceiver.class);
+
+        //get the status of the ToggleButton form the pending intent of the alarm
+        boolean alarmUp = (PendingIntent.getBroadcast(this, NOTIFICATION_ID, notifyIntent,
+                PendingIntent.FLAG_NO_CREATE) != null);
+
         final PendingIntent notifyPendingIntent = PendingIntent.getBroadcast(this, NOTIFICATION_ID
                 , notifyIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 
         ToggleButton alarmToggle = findViewById(R.id.alarmToggle);
+        //Set the toggle to the state of the alarm to avoid reset when the app is cloased
+        alarmToggle.setChecked(alarmUp);
         alarmToggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
