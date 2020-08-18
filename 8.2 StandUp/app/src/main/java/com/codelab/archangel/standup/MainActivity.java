@@ -3,6 +3,7 @@ package com.codelab.archangel.standup;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 
+import android.app.AlarmManager;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -11,6 +12,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.widget.CompoundButton;
 import android.widget.Toast;
 import android.widget.ToggleButton;
@@ -25,33 +27,48 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        final AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+        final Intent notifyIntent = new Intent(this, AlarmReceiver.class);
+        final PendingIntent notifyPendingIntent = PendingIntent.getBroadcast(this, NOTIFICATION_ID
+                , notifyIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+
         ToggleButton alarmToggle = findViewById(R.id.alarmToggle);
         alarmToggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
                 String message;
-                if (isChecked)
-                {
+                if (isChecked) {
+                    long repeatInterval=AlarmManager.INTERVAL_FIFTEEN_MINUTES;
+                    long triggerTime=SystemClock.elapsedRealtime()+repeatInterval;
+                    if (alarmManager!=null){
+                        alarmManager.setInexactRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP
+                        ,triggerTime,repeatInterval,notifyPendingIntent);
+                    }
                     message = " Stand Up Alarm is ON!";
-                    deliverNotification(MainActivity.this);
-                }
-                else
-                {
+
+                } else {
                     message = "Stand Up Alarm is OFF";
+                    if (alarmManager != null) {
+                        alarmManager.cancel(notifyPendingIntent);
+                    }
                     mNotificationManger.cancelAll();
                 }
 
                 Toast.makeText(MainActivity.this, message, Toast.LENGTH_SHORT).show();
             }
         });
+
         createNotificationChannel();
+
+
     }
 
     public void createNotificationChannel() {
         mNotificationManger = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationChannel notificationChannel = new NotificationChannel(PRIMARY_ID,
-                    "Stand Up Notification",NotificationManager.IMPORTANCE_HIGH);
+                    "Stand Up Notification", NotificationManager.IMPORTANCE_HIGH);
             notificationChannel.enableLights(true);
             notificationChannel.setLightColor(Color.YELLOW);
             notificationChannel.enableVibration(true);
@@ -60,20 +77,4 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void deliverNotification(Context context){
-        Intent intent=new Intent(context,MainActivity.class);
-        PendingIntent contentPendingIntent= PendingIntent.getActivity(context,NOTIFICATION_ID,intent
-        ,PendingIntent.FLAG_UPDATE_CURRENT);
-
-        NotificationCompat.Builder builder=new NotificationCompat.Builder(context,PRIMARY_ID)
-                .setSmallIcon(R.drawable.ic_face)
-                .setContentTitle(getString(R.string.notification_title))
-                .setContentText(getString(R.string.notification_text))
-                .setContentIntent(contentPendingIntent)
-                .setAutoCancel(true)
-                .setPriority(NotificationCompat.PRIORITY_HIGH)
-                .setDefaults(NotificationCompat.DEFAULT_ALL);
-
-        mNotificationManger.notify(NOTIFICATION_ID,builder.build());
-    }
 }
