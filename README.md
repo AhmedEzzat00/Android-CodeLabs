@@ -57,3 +57,42 @@ Another crucial skill is to know how to make an app that has screen compatibilit
 ***7. Background tasks:*** Sometimes an app needs to perform ***resource-intensive tasks*** such as *downloading files*, making database *queries*, *playing media*, or computing complex analytics. This type of intensive work ***can block the UI thread*** so that the app doesn't respond to user input or draw on the screen. Users may get frustrated and uninstall your app.
 
 To keep the user experience (UX) running smoothly, the Android framework provides a helper class called `AsyncTask`, which processes work off of the UI thread. Using `AsyncTask` to move intensive processing onto a separate thread means that the UI thread can stay responsive.
+The first part of the lesson descripe why we should keep our work outside the UI thread ,mainly the UI thread has two rules:
+* Don't make operations that **block** the UI
+* Do the UI updates in the UI thread
+so we use the `AsyncTask` its a `Worker` class that make the work in the background thread it has some flaws in term of Presrving UI Configuration from change so we ues `Loader`
+The `AsyncTaskLoader` class is part of the Android platform's `Loader` API, which is a framework to manage loading data into your app in the background. Loaders were deprecated in Android P (API 28) in favor of `ViewModels` and `LiveData`.
+Preparing `Loader` is as much as the `AsyncTask` ,extend the `AsyncTaskLoader<D>`  which D is the result type and implement callback methods in the acticity that will handle the loader, then attach the loader with the activity.
+
+<img src="https://github.com/AhmedEzzat00/Android-CodeLabs/blob/master/screenshots/lab7_search.png" width="200">     <img src="https://github.com/AhmedEzzat00/Android-CodeLabs/blob/master/screenshots/lab7_network.png" width="200">     
+
+
+The last section of this lesson tell us about a major component of the android system, the `BroadcastReceiver` so as it maight seem from its name it has two part away; *Broadcasts* are messages that the Android system and Android apps send when events occur that might affect the functionality of other apps or app components, for examaple the Android system sends a broadcast message when the power is connected or disconnected;A broadcast is received by any app or app component that has a broadcast receiver **registered** for that action.
+
+
+
+***8. Alarms and schedulers:*** What should we do when we want to do some tasks when the app is not on the forground or isn't running? Simple we use `Notification`, A notification is a message that your app displays to the user outside of your app's normal UI. Notifications appear as icons in the device's notification area, which is in the status bar. To see the details of a notification, the user opens the notification drawer, for example by swiping down on the status bar. The notification area and the notification drawer are system-controlled areas that the user can view at any time.
+
+<img src="https://github.com/AhmedEzzat00/Android-CodeLabs/blob/master/screenshots/lab8_notify.png" width="200">     <img src="https://github.com/AhmedEzzat00/Android-CodeLabs/blob/master/screenshots/lab8_notifyupdate.png" width="200"> 
+
+What if app needs to take action at a specific time, for example for a calendar notification? In this case,we would use `AlarmManager`. The `AlarmManager` class lets you launch and repeat a `PendingIntent` at a specified time, or after a specified interval.whether or not your app is running when the alarms go off. Alarms can either be single use or repeating. For example, you can use a repeating alarm to schedule a download every day at the same time.
+There are two general types of alarms in Android: elapsed real-time alarms and real-time clock (RTC) alarms, and both use `PendingIntent` objects.
+*Elapsed real-time* alarms use the time, in milliseconds, since the device was booted. Time zones don't affect elapsed real-time alarms, so these alarms work well for alarms based on the passage of time. For example, use an elapsed real-time alarm for an alarm that fires every half hour.
+*Real-time clock (RTC)* alarms are clock-based alarms that use Coordinated Universal Time (UTC).
+
+In the last part of this lesson we talk about how to organize the flow of operation in away that maintain the battery life and netwrok usage,Transferring data is an essential part of most Android apps, but it can affect battery life and increase data usage. Using the wireless radio to transfer data is potentially one of your app's most significant sources of battery drain.
+
+Users care about battery drain because they would rather use their mobile device without it connected to the charger. And users care about data usage, because every bit of data transferred can cost them money.Constantly monitoring the connectivity and battery status of the device can be a challenge. It requires using components such as broadcast receivers, which can consume system resources even when your app isn't running. Because transferring data efficiently is such a common task, the Android SDK provides a class that makes efficient data transfer much easier: `JobScheduler`.
+
+Introduced in API level 21, `JobScheduler` allows you to schedule a task around specific conditions, rather than a specific time as with `AlarmManager`.
+
+`JobScheduler` has three components:
+
+* `JobInfo` uses the builder pattern to set the conditions for the task.
+* `JobService` is a wrapper around the Service class where the task is actually completed.
+* `JobScheduler` schedules and cancels tasks.
+Using these combinations of Job classes we can determine what job to run , when to run it and at what cost. 
+
+
+### Unit 3:
+***9. Preferences and settings:***
