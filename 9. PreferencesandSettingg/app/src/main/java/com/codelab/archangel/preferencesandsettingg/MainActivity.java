@@ -3,10 +3,12 @@ package com.codelab.archangel.preferencesandsettingg;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -52,6 +54,14 @@ public class MainActivity extends AppCompatActivity {
 
         mColor = mPreferences.getInt(COLOR_KEY, mColor);
         mShowCountTextView.setBackgroundColor(mColor);
+
+        Button settingActivityButton = findViewById(R.id.setting_button);
+        settingActivityButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, AppSetting.class));
+            }
+        });
     }
 
     /**
