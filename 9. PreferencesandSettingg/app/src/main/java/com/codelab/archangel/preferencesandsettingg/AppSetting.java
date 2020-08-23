@@ -1,6 +1,7 @@
 package com.codelab.archangel.preferencesandsettingg;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -9,14 +10,16 @@ import com.google.android.material.snackbar.Snackbar;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.preference.PreferenceManager;
 
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 public class AppSetting extends AppCompatActivity {
-
+    public static final String KEY_PREF_EXAMPLE_SWITCH = "example_switch";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +35,10 @@ public class AppSetting extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        Boolean swtichPref = sharedPreferences.getBoolean(KEY_PREF_EXAMPLE_SWITCH, false);
+        Toast.makeText(this, swtichPref.toString(), Toast.LENGTH_SHORT).show();
     }
 
     @Override
