@@ -46,17 +46,12 @@ public class MainActivity extends AppCompatActivity {
                 R.color.default_background);
         mPreferences = getSharedPreferences(sharedFile, MODE_PRIVATE);
 
-        // Restore the saved instance state.
-        if (savedInstanceState != null) {
+        //Restore the Data using SharedPreferences
+        mCount = mPreferences.getInt(COUNT_KEY, 0);
+        mShowCountTextView.setText(String.format("%s", mCount));
 
-            mCount = savedInstanceState.getInt(COUNT_KEY);
-            if (mCount != 0) {
-                mShowCountTextView.setText(String.format("%s", mCount));
-            }
-
-            mColor = savedInstanceState.getInt(COLOR_KEY);
-            mShowCountTextView.setBackgroundColor(mColor);
-        }
+        mColor = mPreferences.getInt(COLOR_KEY, mColor);
+        mShowCountTextView.setBackgroundColor(mColor);
     }
 
     /**
