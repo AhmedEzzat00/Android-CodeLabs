@@ -43,10 +43,12 @@ public class MainActivity extends AppCompatActivity {
                     seekBarProgress.setText("Not Set");
                 }
             }
+
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
 
             }
+
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
 
@@ -86,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Check if there any constraints is set for the job
         boolean constraintSet = (selectedNetworkType != JobInfo.NETWORK_TYPE_NONE)
-                || mDeviceChargingSwitch.isChecked() || mDeviceIdleSwitch.isChecked() ||seekBarSet;
+                || mDeviceChargingSwitch.isChecked() || mDeviceIdleSwitch.isChecked() || seekBarSet;
         if (constraintSet) {
             JobInfo jobInfo = builder.build();
             mScheduler.schedule(jobInfo);
