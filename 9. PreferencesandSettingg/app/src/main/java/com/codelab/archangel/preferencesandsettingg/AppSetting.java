@@ -37,8 +37,8 @@ public class AppSetting extends AppCompatActivity {
         });
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        Boolean swtichPref = sharedPreferences.getBoolean(KEY_PREF_EXAMPLE_SWITCH, false);
-        Toast.makeText(this, swtichPref.toString(), Toast.LENGTH_SHORT).show();
+        boolean swtichPref = sharedPreferences.getBoolean(KEY_PREF_EXAMPLE_SWITCH, false);
+        Toast.makeText(this, Boolean.toString(swtichPref), Toast.LENGTH_SHORT).show();
     }
 
     @Override
