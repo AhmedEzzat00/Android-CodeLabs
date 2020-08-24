@@ -11,6 +11,7 @@ import androidx.room.RoomDatabase;
 @Database(entities = {Word.class}, version = 1, exportSchema = false)
 public abstract class WordRoomDatabase extends RoomDatabase {
 
+    //Singleton
     private static WordRoomDatabase INSTANCE;
 
     public static WordRoomDatabase getDatabase(final Context context) {
