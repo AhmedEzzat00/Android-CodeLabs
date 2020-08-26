@@ -21,4 +21,8 @@ public interface WordDAO {
     @Query("SELECT * FROM word_table ORDER BY word ASC")
     LiveData<List<Word>> getAllWords();
 
+    //word does not need to return LiveData, because your app will call the method explicitly when needed.
+    @Query("SELECT * FROM word_table LIMIT 1")
+    Word[] getAnyWord();
+
 }
