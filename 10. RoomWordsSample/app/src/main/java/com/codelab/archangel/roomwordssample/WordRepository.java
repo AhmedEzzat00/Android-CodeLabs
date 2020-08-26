@@ -57,4 +57,21 @@ public class WordRepository {
             return null;
         }
     }
+
+    public void deleteWord(Word word) {
+        new deleteWordAsyncTask(mWordDAO).execute(word);
+    }
+
+    private static class deleteWordAsyncTask extends AsyncTask<Word, Void, Void> {
+        private WordDAO mWordDAO;
+
+        public deleteWordAsyncTask(WordDAO wordDAO) {
+        }
+
+        @Override
+        protected Void doInBackground(final Word... words) {
+            mWordDAO.deleteWord(words[0]);
+            return null;
+        }
+    }
 }
