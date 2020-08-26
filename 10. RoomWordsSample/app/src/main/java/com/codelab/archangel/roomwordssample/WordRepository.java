@@ -66,6 +66,7 @@ public class WordRepository {
         private WordDAO mWordDAO;
 
         public deleteWordAsyncTask(WordDAO wordDAO) {
+            this.mWordDAO = wordDAO;
         }
 
         @Override
