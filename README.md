@@ -7,7 +7,7 @@ This repo contains four apps that represent the four units of the [***Android De
 This unit covers installing Android Studio, understanding project structure, building first blocks, creating activities, testing apps, and using the Android Support Library.
 This unit contains three lessons:
 
-***1. Build your first app:*** which contains a basic layout that contains a `TextView` and a three `Button`s , this layout perform a simple counting, when clicking the `Button` the `TextView` increase the count and other `Button` reset the counter to zero.
+***1. Build your first app:*** which contains a basic layout that contains a `TextView` and a three `Button`s , this layout performs a simple counting, when clicking the `Button` the `TextView` increase the count and other `Button` reset the counter to zero.
 
 <img src="https://github.com/AhmedEzzat00/Android-CodeLabs/blob/master/screenshots/lessson%201%20%20screen%20portrait.png" width="200">         <img src=https://github.com/AhmedEzzat00/Android-CodeLabs/blob/master/screenshots/lesson%201screen%20landscape.png width="650">
 
@@ -35,7 +35,7 @@ Another thing is the main navigation of the user throw the app using the up key 
 
 <img src="https://github.com/AhmedEzzat00/Android-CodeLabs/blob/master/screenshots/lab5_scorekeeper.png" width="200"> 
 
-Google's Material Design guidelines are a series of best practices for creating visually appealing and intuitive applications.`CardView` and `FloatingActionButton` widgets are parts of the Material Design they provide a solid pattern to rely on its behavior, how to use images efficiently.
+Google's Material Design guidelines are a series of best practices for creating visually appealing and intuitive applications.` CardView` and `FloatingActionButton` widgets are parts of the Material Design they provide a solid pattern to rely on its behavior, how to use images efficiently.
 ***Material Design offers the following guidelines for CARDS:***
 
 * A card can be dismissed, usually by swiping it away.
@@ -49,7 +49,7 @@ Another crucial skill is to know how to make an app that has screen compatibilit
 <img src="https://github.com/AhmedEzzat00/Android-CodeLabs/blob/master/screenshots/lab5_land.png" width="650">                                                                  <img src="https://github.com/AhmedEzzat00/Android-CodeLabs/blob/master/screenshots/lab5_spian.png" width="200"> 
 
 
-***6. Testing the UI:*** in the final lesson on this unit we encounter with the concept of testing the mobile app using testing techniques, in here we perform a unit test which is the basis for of testing to use, we use it to test each component of the app working correctly when it interacts with user or getting some sort of input and produce some sort of output.
+***6. Testing the UI:*** In the final lesson on this unit we encounter with the concept of testing the mobile app using testing techniques, in here we perform a unit test which is the basis for of testing to use, we use it to test each component of the app working correctly when it interacts with user or getting some sort of input and produce some sort of output.
 `Espresso` is a third-party library they provide us with the necessary tools to perform these tests easily,` Espresso` is a testing framework for Android that makes it easy to write reliable UI tests for an app. The framework, which is part of the Android Support Repository, provides APIs for writing UI tests to simulate user interactions within the app—everything from clicking buttons and navigating views to selecting menu items and entering data.
 
 
@@ -57,32 +57,32 @@ Another crucial skill is to know how to make an app that has screen compatibilit
 ***7. Background tasks:*** Sometimes an app needs to perform ***resource-intensive tasks*** such as *downloading files*, making database *queries*, *playing media*, or computing complex analytics. This type of intensive work ***can block the UI thread*** so that the app doesn't respond to user input or draw on the screen. Users may get frustrated and uninstall your app.
 
 To keep the user experience (UX) running smoothly, the Android framework provides a helper class called `AsyncTask`, which processes work off of the UI thread. Using `AsyncTask` to move intensive processing onto a separate thread means that the UI thread can stay responsive.
-The first part of the lesson descripe why we should keep our work outside the UI thread ,mainly the UI thread has two rules:
+The first part of the lesson describes why we should keep our work outside the UI thread, mainly the UI thread has two rules:
 * Don't make operations that **block** the UI
 * Do the UI updates in the UI thread
-so we use the `AsyncTask` its a `Worker` class that make the work in the background thread it has some flaws in term of Presrving UI Configuration from change so we ues `Loader`
+so we use the `AsyncTask` its a `Worker` class that make the work in the background thread it has some flaws in term of Preserving UI Configuration from change so we use `Loader`
 The `AsyncTaskLoader` class is part of the Android platform's `Loader` API, which is a framework to manage loading data into your app in the background. Loaders were deprecated in Android P (API 28) in favor of `ViewModels` and `LiveData`.
-Preparing `Loader` is as much as the `AsyncTask` ,extend the `AsyncTaskLoader<D>`  which D is the result type and implement callback methods in the acticity that will handle the loader, then attach the loader with the activity.
+Preparing `Loader` is as much as the `AsyncTask`, extend the `AsyncTaskLoader<D>`  which D is the result type and implement callback methods in the activity that will handle the loader, then attach the loader with the activity.
 
 <img src="https://github.com/AhmedEzzat00/Android-CodeLabs/blob/master/screenshots/lab7_search.png" width="200">     <img src="https://github.com/AhmedEzzat00/Android-CodeLabs/blob/master/screenshots/lab7_network.png" width="200">     
 
 
-The last section of this lesson tell us about a major component of the android system, the `BroadcastReceiver` so as it maight seem from its name it has two part away; *Broadcasts* are messages that the Android system and Android apps send when events occur that might affect the functionality of other apps or app components, for examaple the Android system sends a broadcast message when the power is connected or disconnected;A broadcast is received by any app or app component that has a broadcast receiver **registered** for that action.
+The last section of this lesson tells us about a major component of the android system, the `BroadcastReceiver` so as it might seem from its name it has two-part away; *Broadcasts* are messages that the Android system and Android apps send when events occur that might affect the functionality of other apps or app components, for example, the Android system sends a broadcast message when the power is connected or disconnected; A broadcast is received by any app or app component that has a broadcast receiver **registered** for that action.
 
 
 
-***8. Alarms and schedulers:*** What should we do when we want to do some tasks when the app is not on the forground or isn't running? Simple we use `Notification`, A notification is a message that your app displays to the user outside of your app's normal UI. Notifications appear as icons in the device's notification area, which is in the status bar. To see the details of a notification, the user opens the notification drawer, for example by swiping down on the status bar. The notification area and the notification drawer are system-controlled areas that the user can view at any time.
+***8. Alarms and schedulers:*** What should we do when we want to do some tasks when the app is not on the foreground or isn't running? Simple we use `Notification`, A notification is a message that your app displays to the user outside of your app's normal UI. Notifications appear as icons in the device's notification area, which is in the status bar. To see the details of a notification, the user opens the notification drawer, for example by swiping down on the status bar. The notification area and the notification drawer are system-controlled areas that the user can view at any time.
 
 <img src="https://github.com/AhmedEzzat00/Android-CodeLabs/blob/master/screenshots/lab8_notify.png" width="200">     <img src="https://github.com/AhmedEzzat00/Android-CodeLabs/blob/master/screenshots/lab8_notifyupdate.png" width="200"> 
 
-What if app needs to take action at a specific time, for example for a calendar notification? In this case,we would use `AlarmManager`. The `AlarmManager` class lets you launch and repeat a `PendingIntent` at a specified time, or after a specified interval.whether or not your app is running when the alarms go off. Alarms can either be single use or repeating. For example, you can use a repeating alarm to schedule a download every day at the same time.
+What if the app needs to take action at a specific time, for example for a calendar notification? In this case, we would use `AlarmManager`. The `AlarmManager` class lets you launch and repeat a `PendingIntent` at a specified time, or after a specified interval.whether or not your app is running when the alarms go off. Alarms can either be single-use or repeating. For example, you can use a repeating alarm to schedule a download every day at the same time.
 There are two general types of alarms in Android: elapsed real-time alarms and real-time clock (RTC) alarms, and both use `PendingIntent` objects.
 *Elapsed real-time* alarms use the time, in milliseconds, since the device was booted. Time zones don't affect elapsed real-time alarms, so these alarms work well for alarms based on the passage of time. For example, use an elapsed real-time alarm for an alarm that fires every half hour.
 *Real-time clock (RTC)* alarms are clock-based alarms that use Coordinated Universal Time (UTC).
 
-In the last part of this lesson we talk about how to organize the flow of operation in away that maintain the battery life and netwrok usage,Transferring data is an essential part of most Android apps, but it can affect battery life and increase data usage. Using the wireless radio to transfer data is potentially one of your app's most significant sources of battery drain.
+In the last part of this lesson we talk about how to organize the flow of operation in a way that maintains the battery life and network usage, Transferring data is an essential part of most Android apps, but it can affect battery life and increase data usage. Using the wireless radio to transfer data is potentially one of your app's most significant sources of battery drain.
 
-Users care about battery drain because they would rather use their mobile device without it connected to the charger. And users care about data usage, because every bit of data transferred can cost them money.Constantly monitoring the connectivity and battery status of the device can be a challenge. It requires using components such as broadcast receivers, which can consume system resources even when your app isn't running. Because transferring data efficiently is such a common task, the Android SDK provides a class that makes efficient data transfer much easier: `JobScheduler`.
+Users care about battery drain because they would rather use their mobile devices without it connected to the charger. And users care about data usage because every bit of data transferred can cost them money. Constantly monitoring the connectivity and battery status of the device can be a challenge. It requires using components such as broadcast receivers, which can consume system resources even when your app isn't running. Because transferring data efficiently is such a common task, the Android SDK provides a class that makes efficient data transfer much easier: `JobScheduler`.
 
 Introduced in API level 21, `JobScheduler` allows you to schedule a task around specific conditions, rather than a specific time as with `AlarmManager`.
 
@@ -91,8 +91,46 @@ Introduced in API level 21, `JobScheduler` allows you to schedule a task around 
 * `JobInfo` uses the builder pattern to set the conditions for the task.
 * `JobService` is a wrapper around the Service class where the task is actually completed.
 * `JobScheduler` schedules and cancels tasks.
-Using these combinations of Job classes we can determine what job to run , when to run it and at what cost. 
+Using these combinations of Job classes we can determine what job to run when to run it and at what cost. 
 
+<img src="https://github.com/AhmedEzzat00/Android-CodeLabs/blob/master/screenshots/android_workmanager_choice.png"> 
 
 ### Unit 4:
-***9. Preferences and settings:***
+***9. Preferences and settings:*** Android provides several options for you to save persistent app data. The solution you choose depends on your specific needs, such as whether the data should be private to your app or access to other apps (and the user) and how much space your data requires. Your data storage options include the following:
+
+* *Shared preferences*: Store private primitive data in key-value pairs. This is covered in the next chapter.
+* *Internal storage*: Store private data on the device memory.
+* *External storage*: Store public data on the shared external storage.
+* *SQLite databases*: Store structured data in a private database.
+* *Room persistence library*: Part of the Android Architecture Component libraries. Room caches an SQLite database locally and automatically syncs changes to a network database
+* *Cloud backup*: Back up your app and user data in the cloud.
+* *Firebase realtime database*: Store and sync data with a NoSQL cloud database. Data is synced across all clients in real-time and remains available when your app goes offline.
+* *Custom data store*: Configure the Preference APIs to store preferences in a storage location you provide.
+
+Shared preferences allow you to store small amounts of primitive data as key/value pairs in a file on the device. To get a handle to a preference file, and to read, write, and manage preference data, use the `SharedPreferences` class. 
+
+The second part of this lesson is app setting, Apps often include settings that allow users to modify app features and behaviors. For example, some apps allow users to specify whether notifications are enabled, or how often the app syncs data with the cloud.
+
+The controls that belong in the app's settings should capture user preferences that affect most users or provide critical support to a minority of users. For example, notification settings affect all users, while a currency setting for a foreign market provides critical support for the users in that market.
+
+Most settings are accessed infrequently because once users change a setting, they rarely need to go back and change it again. If users need to access control or preference frequently, consider moving the control or preference to the app bar options menu, or a side navigation menu such as a navigation drawer.
+
+<img src="https://github.com/AhmedEzzat00/Android-CodeLabs/blob/master/screenshots/lab9_sharedpref.png" width="200"> 
+
+***10. Storing data with Room:*** SQLite is a software library. SQLite implements an SQL database engine that has the following characteristics:
+
+* Self-contained (requires no other components)
+* Serverless (requires no server backend)
+* Zero-configuration (does not need to be configured for your app)
+* Transactional (changes within a single transaction in SQLite either occur completely or not at all)
+* SQLite is the most widely deployed database engine in the world. The source code for SQLite is in the public domain.
+
+So as we see SQLite is a powerful database that we can use in our app to store data and fetch them locally, we can add another layer in the top of it using **Room** library with a combination of **App Component Architecture**, so *what are Android Architecture Components?*
+
+The Android OS manages resources aggressively to perform well on a huge range of devices, and sometimes that makes it challenging to build robust apps. Android Architecture Components guide app architecture, with libraries for common tasks like lifecycle management and data persistence.
+
+Room is a database layer on top of an SQLite database. Room takes care of mundane tasks that you used to handle with an `SQLiteOpenHelper`.
+
+* Room provides compile-time checks of SQLite statements.
+* By default, to avoid poor UI performance, Room doesn't allow you to issue database queries on the main thread. LiveData applies this rule by automatically running the query asynchronously on a background thread when needed.
+* Usually, we only need one instance of the Room database for the whole app. Make your RoomDatabase a singleton to prevent having multiple instances of the database opened at the same time, which would be a bad thing.
