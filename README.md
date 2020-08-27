@@ -78,10 +78,9 @@ There are two general types of alarms in Android: elapsed real-time alarms and r
 *Elapsed real-time* alarms use the time, in milliseconds, since the device was booted. Time zones don't affect elapsed real-time alarms, so these alarms work well for alarms based on the passage of time. For example, use an elapsed real-time alarm for an alarm that fires every half hour.
 *Real-time clock (RTC)* alarms are clock-based alarms that use Coordinated Universal Time (UTC).
 
-<img align="right" src="https://github.com/AhmedEzzat00/Android-CodeLabs/blob/master/screenshots/lab8_notifyupdate.png"  width="288" height="512" style="display: inline; float: right"/>
-
 In the last part of this lesson we talk about how to organize the flow of operation in a way that maintains the battery life and network usage, Transferring data is an essential part of most Android apps, but it can affect battery life and increase data usage. Using the wireless radio to transfer data is potentially one of your app's most significant sources of battery drain.
 
+<img align="right" src="https://github.com/AhmedEzzat00/Android-CodeLabs/blob/master/screenshots/lab8_notifyupdate.png"  width="288" height="512" style="display: inline; float: right"/>
 
 Users care about battery drain because they would rather use their mobile devices without it connected to the charger. And users care about data usage because every bit of data transferred can cost them money. Constantly monitoring the connectivity and battery status of the device can be a challenge. It requires using components such as broadcast receivers, which can consume system resources even when your app isn't running. Because transferring data efficiently is such a common task, the Android SDK provides a class that makes efficient data transfer much easier: `JobScheduler`.
 
