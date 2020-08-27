@@ -18,11 +18,10 @@ This unit contains three lessons:
 
 ***3. Debugging and Unit Test:*** introduce the powerful debugger of android studio and its features, how to set breakpoints, how to evaluate and expression, how to attach the debugger to a process ...etc. Also, introduce the Unit testing techniques using the `JUnit` library and how to set the *test source set* to test the logic of the app.
 
+<img align="right" src="https://github.com/AhmedEzzat00/Android-CodeLabs/blob/master/screenshots/lab4_orderscreen.png"  width="288" height="512" style="display: inline; float: right"/>
 
 ### Unit 2:
 This unit covers how to get input from the user, implement navigation strategies, use themes and styles, test user interface, and follow Material Design principles. Use menus and tabs for navigation, and input controls such as spinners and picker dialogs to get information from the user. How to extract resources to create a style from an instance of a user interface element. 
-
-<img align="right" src="https://github.com/AhmedEzzat00/Android-CodeLabs/blob/master/screenshots/lab4_orderscreen.png"  width="288" height="512" style="display: inline; float: right"/>
 
 ***4. User interaction:*** in this lesson we encounter with the concept of user interaction with the main components of the app how to make use of a clickable image, take input from the user with various ways such as `EditText` to specify the input type for a specific kind of information (eg. phone number, person name,..etc) or `RadioButton` in RadioGroup to select one option from many of the `CheckBox` that can be either selected or none. 
 
@@ -46,8 +45,7 @@ Google's Material Design guidelines are a series of best practices for creating 
 
 Another crucial skill is to know how to make an app that has screen compatibility to the different screen of different devices and different orientation so that the User Experience does not being a disturbance for the growth or shrinking of the screen, finally it to localize app to use different languages for different regions 
 
-<img src="https://github.com/AhmedEzzat00/Android-CodeLabs/blob/master/screenshots/lab5_land.png" width="650">                                                                  <img src="https://github.com/AhmedEzzat00/Android-CodeLabs/blob/master/screenshots/lab5_spian.png" width="200"> 
-
+<img src="https://github.com/AhmedEzzat00/Android-CodeLabs/blob/master/screenshots/lab5_land.png" width="650">                                                                 
 
 ***6. Testing the UI:*** In the final lesson on this unit we encounter with the concept of testing the mobile app using testing techniques, in here we perform a unit test which is the basis for of testing to use, we use it to test each component of the app working correctly when it interacts with user or getting some sort of input and produce some sort of output.
 `Espresso` is a third-party library they provide us with the necessary tools to perform these tests easily,` Espresso` is a testing framework for Android that makes it easy to write reliable UI tests for an app. The framework, which is part of the Android Support Repository, provides APIs for writing UI tests to simulate user interactions within the app—everything from clicking buttons and navigating views to selecting menu items and entering data.
@@ -74,12 +72,13 @@ The last section of this lesson tells us about a major component of the android 
 
 ***8. Alarms and schedulers:*** What should we do when we want to do some tasks when the app is not on the foreground or isn't running? Simple we use `Notification`, A notification is a message that your app displays to the user outside of your app's normal UI. Notifications appear as icons in the device's notification area, which is in the status bar. To see the details of a notification, the user opens the notification drawer, for example by swiping down on the status bar. The notification area and the notification drawer are system-controlled areas that the user can view at any time.
 
-<img align="right" src="https://github.com/AhmedEzzat00/Android-CodeLabs/blob/master/screenshots/lab8_notifyupdate.png"  width="288" height="512" style="display: inline; float: right"/>
 
 What if the app needs to take action at a specific time, for example for a calendar notification? In this case, we would use `AlarmManager`. The `AlarmManager` class lets you launch and repeat a `PendingIntent` at a specified time, or after a specified interval.whether or not your app is running when the alarms go off. Alarms can either be single-use or repeating. For example, you can use a repeating alarm to schedule a download every day at the same time.
 There are two general types of alarms in Android: elapsed real-time alarms and real-time clock (RTC) alarms, and both use `PendingIntent` objects.
 *Elapsed real-time* alarms use the time, in milliseconds, since the device was booted. Time zones don't affect elapsed real-time alarms, so these alarms work well for alarms based on the passage of time. For example, use an elapsed real-time alarm for an alarm that fires every half hour.
 *Real-time clock (RTC)* alarms are clock-based alarms that use Coordinated Universal Time (UTC).
+
+<img align="right" src="https://github.com/AhmedEzzat00/Android-CodeLabs/blob/master/screenshots/lab8_notifyupdate.png"  width="288" height="512" style="display: inline; float: right"/>
 
 In the last part of this lesson we talk about how to organize the flow of operation in a way that maintains the battery life and network usage, Transferring data is an essential part of most Android apps, but it can affect battery life and increase data usage. Using the wireless radio to transfer data is potentially one of your app's most significant sources of battery drain.
 
