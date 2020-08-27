@@ -14,7 +14,7 @@ This unit contains three lessons:
 
 ***2. Activities and Intents:*** this lesson explain the basic interaction between activities is introduced throw starting the second `Activity` when clicking a button and trying to preserve the UI from the setting configuration change e.g. screen rotation, receiving a call. also experiment with `Intent` by using explicit intent to launch the second activity and implicit intent to share some text, open a location on a map, and opening a website.
 
-<img src="https://github.com/AhmedEzzat00/Android-CodeLabs/blob/master/screenshots/lab2_implicitactivity.png" width="200">                                                    <img src="https://github.com/AhmedEzzat00/Android-CodeLabs/blob/master/screenshots/lab2_secondactivity.png" width="200">                                                   <img src=https://github.com/AhmedEzzat00/Android-CodeLabs/blob/master/screenshots/lab3_mainactivity.png  width="200">
+<img src="https://github.com/AhmedEzzat00/Android-CodeLabs/blob/master/screenshots/lab2_implicitactivity.png" width="200">                                                    <img src="https://github.com/AhmedEzzat00/Android-CodeLabs/blob/master/screenshots/lab2_secondactivity.png" width="200"><img src=https://github.com/AhmedEzzat00/Android-CodeLabs/blob/master/screenshots/lab3_mainactivity.png  width="200">
 
 ***3. Debugging and Unit Test:*** introduce the powerful debugger of android studio and its features, how to set breakpoints, how to evaluate and expression, how to attach the debugger to a process ...etc. Also, introduce the Unit testing techniques using the `JUnit` library and how to set the *test source set* to test the logic of the app.
 
